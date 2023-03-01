@@ -145,5 +145,35 @@ namespace AnalogWatch
 
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+           
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.BackColor = Color.White;
+            Application.DoEvents();
+            drawClock();
+            refreshStuff();
+            button1.Visible = true;
+            label1.Visible = true;
+            label2.Visible = true;
+            label3.Visible = true;
+           
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.BackColor = Color.LimeGreen;
+            this.TransparencyKey = Color.LimeGreen;
+            Application.DoEvents();
+            drawClock();
+            refreshStuff();
+            button1.Visible = false;
+            label1.Visible = false;
+            label2.Visible = false;
+            label3.Visible = false;
+            MessageBox.Show("Pro obnovu okna, klikni na hodiny");
+        }
     }
 }
