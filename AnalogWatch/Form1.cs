@@ -28,7 +28,7 @@ namespace AnalogWatch
         private void timer1_Tick(object sender, EventArgs e)
         {
            eraseHands();
-            updateTime();
+           updateTime();
            refreshStuff();
         }
 
@@ -83,8 +83,6 @@ namespace AnalogWatch
                 {
                     g.DrawLine(smallLines, 90, 0, 100, 0);
                 }
-
-                
                 g.ResetTransform();
             }
             Font font = new Font("Arial", 12);
